@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0d7cc6;
+  --secondary-color: #f68712;
+  --terty-color: #90c2e6;
+  --black: #010101;
+  --white: #f2f2f2;
+  --background: aliceblue;
+}
+
+.navbar {
+  overflow: hidden;
+  padding: 20px 20px;
+  padding-bottom: 0;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.navbar-shrink {
+  padding: 0px 0px;
+}
+.container {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  padding-inline: 2vh;
+  height: 12vh;
+  place-items: center;
+  background: white;
+}
+.container-shrink {
+  border-radius: 0;
+  background: var(--terty-color);
+}
+
+.logo-container {
+  width: 30%;
+  height: 10vh;
+  padding: 1vh;
+  .logo-content {
+    width: 70%;
+    height: 8vh;
+    display: flex;
+    gap: 0.5vh;
+  }
+}
+.logo {
+  width: 20%;
+  height: 8vh;
+  background-image: url(../images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.logo-texte {
+  width: 80%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+nav {
+  width: 40%;
+  height: 10vh;
+
+  ul {
+    width: 100%;
+    height: 10vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2vh;
+
+    li a {
+      text-decoration: none;
+      color: var(--black);
+    }
+  }
+}
+.button {
+  width: 30%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  button {
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    background: var(--primary-color);
+    border: none;
+    a {
+      text-decoration: none;
+      color: var(--white);
+      font-weight: lighter;
+    }
+  }
+}
+.button button:hover{
+  background: var(--background);
+  transition: .5s;
+  a{
+    color: var(--black);
+  }
+}
+.navbar-mobile {
+  display: none;
+}
+@media (width<=768px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    position: fixed;
+    z-index: 1;
+  }
+  .container-mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 2vh;
+    height: 12vh;
+    place-items: center;
+    background: var(--white);
+  }
+  .logo-container-mobile{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+   
+  }
+
+  .logo-mobile {
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+  .logo-texte-mobile {
+    font-size: 1rem;
+  }
+  .sidepanel {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: block;
+    ul{
+    
+      width: 50%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      gap: 5vh;
+      padding: 3vh;
+      transition: 0.3s;
+      list-style: none;
+    a{
+      text-decoration: none;
+      font-size: 30px;
+      color: var(--black);
+    }
+    }
+  }
+.sidepanel-button-container{
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-inline-end: 3vh;
+  .button-border{
+   height: 2vh;
+    aspect-ratio: 1/1;
+  }
+  .closebtn {
+    font-size: 2rem;
+    padding-inline: 1vh;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    color: var(--white);
+  }
+}
+  .openbtn,.closebtn{
+    background: transparent;
+    cursor: pointer;
+    color: var(--black);
+    border: none;
+  }
+  .openbtn{
+    font-size: 2rem;
+  }
+  .button {
+    width: 35%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+     width: 100%;
+     height: 60%;
+    }
+  }
+  .logo-texte {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+}

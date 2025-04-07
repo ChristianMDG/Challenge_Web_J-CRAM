@@ -1,0 +1,17 @@
+#about, #hotel, #reservation,#destination{
+animation: scrollAnimation ease 5s;
+animation-timeline: view();
+animation-range-start: cover 0%;
+animation-range-end:cover 50% ;
+}
+
+@keyframes scrollAnimation {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
